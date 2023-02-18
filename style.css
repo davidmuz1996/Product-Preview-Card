@@ -1,0 +1,154 @@
+/* reset */
+
+/*1. Use a more-intuitive box-sizing model.*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*2. Remove default margin  */
+* {
+    margin: 0;
+}
+
+/*3. Allow percentage-based heights in the application  */
+html,
+body {
+    height: 100%;
+}
+
+/*Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Remove built-in form typography styles  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* general styling */
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-size: 0.875rem;
+    display: grid;
+    place-content: center;
+    font-family: "montserrat";
+    color: hsl(228, 12%, 48%);
+    margin: 1rem;
+
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: grid;
+    max-width: 600px;
+    overflow:hidden
+}
+
+@media(min-width:600px){
+    .product{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.product-content {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.product-category {
+    font-size: 0.8125rem;
+    letter-spacing: 0.1875rem;
+
+}
+
+.product-title {
+    color: hsl(212, 21%, 14%);
+    font-family: "fraunces";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.product-description {
+    font-weight: 500;
+}
+
+.product-prices {
+    display: flex;
+}
+
+.product-new-price {
+    color: hsl(158, 36%, 37%);
+    font-family: "fraunces";
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.product-old-price {
+    font-weight: 500;
+    margin: 0.93rem 0 0 0.93rem;
+    text-decoration: line-through;
+}
+
+.btn {
+    border-radius: 0.4375rem;
+    border: none;
+    color: #fff;
+    background-color: #278765;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.btn[data-icon="shopping-cart"]::before {
+    content:url(images/icon-cart.svg);
+    position:relative;
+    top: 3px;
+    right:5px;
+    
+}
+
+.btn:hover {
+    background: #2d4f42;
+}
+
+.copyright {
+    color: hsl(0, 0%, 100%);
+    text-align:center;
+    font-size: xx-small;
+    position: relative;
+    top: 2rem;
+}
